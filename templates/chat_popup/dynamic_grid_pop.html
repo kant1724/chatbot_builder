@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>dynamic_grid</title>
+</head>
+<link rel="stylesheet" href="/static/css/button.css">
+<link rel="stylesheet" href="/static/css/icon.css">
+<link rel="stylesheet" href="/static/css/chat_popup/dynamic_grid_pop.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/gt_grid.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/skin/vista/skinstyle.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/skin/mac/skinstyle.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/skin/pink/skinstyle.css">		
+<body>
+<div class="div1">
+	<div class="div1-inner">
+		<img class="right-arrow" src="static/res/right_arrow.png" />&nbsp;<a id="dynamic_title"></a>
+	</div>
+</div>
+<p>
+<div id="dynamic_data_grid"></div>
+<p>
+<img class="question-mark" src="static/res/question_mark.png" />&nbsp;<a>이 계좌로 더 많은 정보를 보시겠습니까? 아래 입력칸에 질문을 입력하세요. 예) 이 계좌의 제신고현황 보여줘</a>
+<p>
+<input id="question" type="text" value="" size="100">
+<input id="user" type="hidden" value="{{ user }}">
+<input id="project" type="hidden" value="{{ project }}">
+<input id="param_holder" type="hidden" value="{{ param_holder }}">
+<input id="title" type="hidden" value="{{ title }}">
+<input id="column_info" type="hidden" value="{{ column_info }}">
+<input id="content" type="hidden" value="{{ content }}">
+<form id="form_dynamic_grid_pop" name="form_dynamic_grid_pop" method="post" action="dynamic_grid_pop" target="_self">
+	<input type="hidden" id="dynamic_grid_user" name="user" value="">
+    <input type="hidden" id="dynamic_grid_project" name="project" value="">
+    <input type="hidden" id="dynamic_grid_param_holder" name="param_holder" value="">
+    <input type="hidden" id="dynamic_grid_title" name="title" value="">
+    <input type="hidden" id="dynamic_grid_column_info" name="column_info" value="">
+    <input type="hidden" id="dynamic_grid_content" name="content" value="">
+</form>
+<script src='/static/lib/jquery/jquery.min.js'></script>
+<script src="/static/lib/sigma_grid/gt_grid_all.js"></script>
+<script src="/static/lib/sigma_grid/gt_msg_en.js"></script>
+<script src="/static/js/chat_popup/dynamic_grid_pop.js"></script>
+<script src="/static/js/util/text_util.js"></script>
+</body>
+</html>

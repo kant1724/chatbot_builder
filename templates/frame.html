@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title>chatbot_builder</title>
+</head>
+<link rel="stylesheet" href="/static/css/frame.css">
+<link rel="stylesheet" href="/static/css/top_menu.css">
+<link rel="stylesheet" href="/static/lib/jquery/jquery.modal.min.css">
+<body>
+<div class="container">
+	<div id="data_collection_dropdown" class="dropdown-content">
+	    <a id="new_request" href="#">신규요청</a>
+		<a id="error_statistics" href="#">오답통계</a>
+	</div>
+	<div id="voca_synonym_dropdown" class="dropdown-content">
+	    <a id="voca_manager" href="#">단어관리</a>
+		<a id="update_question_voca" href="#">단어추출</a>
+		<a id="synonym_manager" href="#">동의어관리</a>
+	</div>
+	<div class="topnav">
+	  <a id="my_page" class="direct_btn" href="#">내정보</a>
+	  <a id="qna" class="direct_btn" href="#">질문답변</a>
+	  <a id="bucket_manager" class="direct_btn" href="#">버킷관리</a>
+	  <a id="compression_tag" class="direct_btn" href="#">압축태그</a>
+	  <a id="notice_manager" class="direct_btn" href="#">공지관리</a>
+	  <a id="data_collection" href="#">데이타수집</a>
+  	  <a id="voca_synonym" href="#">단어/동의어</a>
+	  <a id="category_manager" class="direct_btn" href="#">분류관리</a>
+	  <a id="error_detection" class="direct_btn" href="#">오답검출</a>
+	  <a id="chatbot_config" class="direct_btn" href="#">챗봇설정</a>
+	</div>
+	<div class="info-bar"><span>User: {{ user }}  /  Project: {{ project }}  /  Emno: {{ emno }} </span><span class="menu-name"></span>
+	</div>
+	<div class="div-main">
+	</div>
+	<div class="left-window">
+		<div class="left-title">
+			<a class="title-name">훈련학습</a>
+		</div>
+		<div class="left-content">
+		</div>
+		<div class="logo-img">
+			<img src="static/res/i-learning_logo.png" />
+		</div>
+		<a id="run_chatbot" class="blue-button"><span>1:1대화</span></a>
+		<a id="group_chat" class="blue-button"><span>그룹대화</span></a>
+		<a id="action_principle" class="blue-button"><span>동작원리</span></a>
+	</div>
+	<div class="powered-by-text">powered by</div>
+	<div class="tensorflow-img">
+		<img src="static/res/tensorflow.png" />
+	</div>
+	<form name="loading" id="loading" method="post" action="/loading" target="loading_page">
+		<input type="hidden" name="user" value="{{ user }}">
+		<input type="hidden" name="project" value="{{ project }}">
+		<input type="hidden" name="emno" value="{{ emno }}">
+		<input type="hidden" id="room_name" name="room_name">
+		<input type="hidden" id="gubun" name="gubun" value="1">
+	</form>
+	<div class="bottom-nav"><div id="hide_testing"></div><div id="training_test" class="div-bottom"></div></div>
+	<input id="user" type="hidden" value="{{ user }}">
+	<input id="project" type="hidden" value="{{ project }}">
+	<input id="emno" type="hidden" value="{{ emno }}">
+</div>
+<div id="create_chat" class="login_form modal">
+	<p><label>대화방명:</label><input id="chat_room_name" type="text" /></p>
+	<p><label>패스워드:</label><input id="chat_room_password" type="password" /></p>
+	<p><button id="enter_room">대화방입장</button>
+	<button id="create_new_room">대화방개설</button></p>
+	<a id="modal_close" href="#" rel="modal:close" style="display: none"></a>
+</div>
+<script src='/static/lib/jquery/jquery.min.js'></script>
+<script src='/static/lib/jquery/jquery.modal.min.js'></script>
+<script src='/static/js/popup/popup_size.js'></script>
+<script src="/static/js/frame.js"></script>
+</body>
+</html>

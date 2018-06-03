@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>add_image</title>
+</head>
+<link rel="stylesheet" href="/static/css/button.css">
+<link rel="stylesheet" href="/static/css/popup/add_image_pop.css">
+<body>
+<div class="container">
+</div>
+<div class="file_manager">
+	<button id="add_image">추가</button>
+	<button id="modify_image">변경</button>
+	<button id="delete_image">삭제</button>
+</div>
+<form id="send_file_form" method=post enctype=multipart/form-data>
+	<input type="hidden" id="user" name="user" value="{{ user }}">
+	<input type="hidden" id="project" name="project" value="{{ project }}">
+	<input type="hidden" id="answer_num" name="answer_num" value="{{ answer_num }}">
+	<input type="hidden" id="file_ip" name="file_ip" value="{{ file_ip }}">
+	<input type="hidden" id="image_cnt" name="image_cnt" value="">
+	<input type="hidden" id="image_file_name" name="image_file_name" value="">
+	<input type="hidden" id="gubun" name="gubun" value="">
+	<input type="file" id="image_file" name="">
+</form>
+<script src='/static/lib/jquery/jquery.min.js'></script>
+<script src='/static/lib/jquery/jquery.slides.js'></script>
+<script src="/static/js/popup/add_image_pop.js"></script>
+</body>
+</html>

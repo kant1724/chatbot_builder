@@ -1,0 +1,44 @@
+#slides {
+}
+
+#slides .slidesjs-navigation {
+	margin-top:3px;
+}
+
+#slides .slidesjs-previous {
+	display: none;
+}
+
+#slides .slidesjs-next {
+	display: none;
+}
+
+.slidesjs-pagination {
+	position: absolute;
+	left: -45px;
+	font-size: 1.3em;
+	margin: 6px 0 0;
+	float: left;
+	list-style: none;
+}
+
+.slidesjs-pagination li {
+	float: left;
+	margin: 0 5px;
+}
+
+.container {
+	position: relative;
+	width: 900px;
+	height: 550px;
+	border: 1px solid gray;
+}
+
+.file_manager {
+	position: relative;
+	top: 10px;
+}
+
+#image_file {
+	display: none;
+}

@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>category_manager</title>
+</head>
+<link rel="stylesheet" href="/static/css/button.css">
+<link rel="stylesheet" href="/static/css/icon.css">
+<link rel="stylesheet" href="/static/css/main/category_manager_main.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/gt_grid.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/skin/vista/skinstyle.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/skin/mac/skinstyle.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/skin/pink/skinstyle.css">
+<body>
+<div class="div1">
+	<div class="div1-inner">
+		<img class="right-arrow" src="static/res/right_arrow.png" />&nbsp;
+		<input id="subject" type="text" name="subject" size="20">
+		<button id="search_category">조회</button>
+		<button id="add_category">행추가</button>
+		<button id="delete_category">행삭제</button>
+		<button id="submit_category">저장</button>
+	</div>
+</div>
+<p>
+<div id="category_grid"></div>
+<input id="category_num" type="hidden">
+<input id="cur_row" type="hidden">
+<p>
+<script src='/static/lib/jquery/jquery.min.js'></script>
+<script src="/static/lib/sigma_grid/gt_grid_all.js"></script>
+<script src="/static/lib/sigma_grid/gt_msg_en.js"></script>
+<script src="/static/js/main/category_manager_main.js"></script>
+</body>
+</html>

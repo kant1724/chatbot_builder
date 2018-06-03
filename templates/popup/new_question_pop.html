@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>new_question</title>
+</head>
+<link rel="stylesheet" href="/static/css/button.css">
+<link rel="stylesheet" href="/static/css/icon.css">
+<link rel="stylesheet" href="/static/css/popup/new_question_pop.css">
+<link rel="stylesheet" href="/static/lib/jquery/jquery.highlight-within-textarea.css" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/gt_grid.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/skin/vista/skinstyle.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/skin/mac/skinstyle.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/skin/pink/skinstyle.css">		
+<body>
+<div class="div1">
+	<div class="div1-inner">
+		<img class="right-arrow" src="static/res/right_arrow.png" />&nbsp;<a>신규질문 입력</a>&nbsp;&nbsp;
+		<button id="add_row">행추가</button>
+		<button id="del_row">행삭제</button>
+		<button id="clear_all">초기화</button>
+	</div>
+</div>
+<p>
+<div id="new_question_grid"></div>
+<p>
+<div class="div2">
+	<div class="div2-inner">
+		<button id="set_highlight">부분지정</button>
+		<button id="reset_highlight">지정해제</button>
+		<button id="auto_add_row">자동 유사질문 추가</button>
+	</div>
+</div>
+<p>
+<textarea id="question_input" rows="5" cols="67"></textarea>
+<p>
+<textarea readonly id="realtime_reserve" rows="7" cols="67"></textarea>
+<p>
+<button id="submit_question">서버로 전송(저장)</button>
+<input id="user" type="hidden" value="{{ user }}">
+<input id="project" type="hidden" value="{{ project }}">
+<input id="answer_num" type="hidden" value="{{ ans_num }}">
+<input id="expression" type="hidden">
+<input id="fragment_range" type="hidden">
+<input id="num" type="hidden">
+<script src='/static/lib/jquery/jquery.min.js'></script>
+<script src="/static/lib/sigma_grid/gt_grid_all.js"></script>
+<script src="/static/lib/sigma_grid/gt_msg_en.js"></script>
+<script src="/static/js/popup/new_question_pop.js"></script>
+<script src="/static/js/util/text_util.js"></script>
+<script src="/static/lib/jquery/jquery.highlight-within-textarea.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>new_answer</title>
+</head>
+<link rel="stylesheet" href="/static/css/button.css">
+<link rel="stylesheet" href="/static/css/icon.css">
+<link rel="stylesheet" href="/static/css/popup/easy_manager_pop.css">
+<link rel="stylesheet" href="/static/lib/slick_grid/slick.grid.css" type="text/css"/>
+<link rel="stylesheet" href="/static/lib/slick_grid/jquery-ui-1.8.16.custom.css" type="text/css"/>
+<link rel="stylesheet" href="/static/lib/slick_grid/style.css" type="text/css"/>
+<body>
+<div id="pager">
+	<div class="div1">
+		<div class="div1-inner">
+			<img class="right-arrow" src="static/res/right_arrow.png" />&nbsp;
+			<select id="gubun">
+				<option value="1">질문으로조회</option>
+				<option value="2">답변으로조회</option>
+			</select>
+			<input id="subject" type="text" name="subject" size="40">
+			<button id="search_answer">조회</button>
+		</div>
+	</div>	
+</div>
+<p>
+<div id="container">
+</div>
+<input id="user" type="hidden" value="{{ user }}">
+<input id="project" type="hidden" value="{{ project }}">
+<input id="cur_div_id" type="hidden">
+<script src='/static/lib/jquery/jquery.min.js'></script>
+<script src="/static/js/popup/easy_manager_pop.js"></script>
+<script src="/static/js/util/text_util.js"></script>
+</body>
+</html>

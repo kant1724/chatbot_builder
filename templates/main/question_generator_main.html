@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title>question_generator</title>
+</head>
+<link rel="stylesheet" href="/static/css/button.css">
+<body>
+<button id="start_generating_all_fragment">질문조각 생성시작</button>
+<p>
+<div id="generating_all_fragment_info"></div>
+<input id="user" type="hidden" value="{{ user }}">
+<input id="project" type="hidden" value="{{ project }}">
+<input id="is_generating_all_fragment" type="hidden" value="{{ is_generating_all_fragment }}">
+<script src='/static/lib/jquery/jquery.min.js'></script>
+<script src="/static/js/main/question_generator_main.js"></script>
+</body>
+</html>

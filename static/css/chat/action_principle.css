@@ -1,0 +1,36 @@
+#seq2seq {
+	position: relative;
+	top: 10px;
+	background: gray;
+	color: white;
+}
+
+#my_question {
+	position: relative;
+	top: 5px;
+}
+
+#enc_token_words {
+	position: relative;
+	top: 10px;
+}
+
+#enc_token_ids {
+	position: relative;
+	top: 10px;
+}
+
+#dec_token_ids {
+	position: relative;
+	top: 10px;
+}
+
+#dec_token_words {
+	position: relative;
+	top: 10px;
+}
+
+#answer {
+	position: relative;
+	top: 10px;
+}

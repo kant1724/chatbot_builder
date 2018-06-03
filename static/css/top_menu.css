@@ -1,0 +1,65 @@
+.topnav {
+  	background: #EAEAEA;
+    overflow: hidden;
+    font-size: 14px;
+	font-family: Roboto, Arial, sans-serif;
+	font-weight: 700;
+	position: relative;
+	border: 1px solid #A6A6A6;
+	border-radius: 2px;
+	left: 1px;
+	width: 95%;
+}
+
+.topnav a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #353535;
+}
+
+.topnav a:hover {
+    background-color: #BDBDBD;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #333;
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 57px;
+    z-index: 2;
+    border: 1px solid gray;
+    background-color: #f1f1f1;
+}
+
+#data_collection_dropdown {
+	left: 493px;
+    width: 115px;
+}
+
+#voca_synonym_dropdown {
+	left: 610px;
+    width: 120px;	
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-top: 1px solid #D5D5D5;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.dropdown-content a:hover {
+	background-color: #BDBDBD;	
+}

@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>notice_manager</title>
+</head>
+<link rel="stylesheet" href="/static/css/button.css">
+<link rel="stylesheet" href="/static/css/icon.css">
+<link rel="stylesheet" href="/static/css/main/notice_manager_main.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/gt_grid.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/skin/vista/skinstyle.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/skin/mac/skinstyle.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/skin/pink/skinstyle.css">
+<body>
+<div class="div1">
+	<div class="div1-inner">
+		<img class="right-arrow" src="static/res/right_arrow.png" />&nbsp;
+		<select id="complete_yn">
+			<option value="N">공지중</option>
+			<option value="Y">공지완료</option>
+		</select>
+		<input id="subject" type="text" name="subject" size="30">
+		<button id="search_notice">조회</button>
+		<button id="add_new_notice">신규</button>
+		<button id="modify_notice">변경</button>
+		<button id="delete_notice">삭제</button>
+		<button id=submit_notice_complete>공지완료</button>
+	</div>
+</div>
+<p>
+<div id="notice_grid"></div>
+<input id="notice_num" type="hidden">
+<input id="user" type="hidden" value="{{ user }}">
+<input id="project" type="hidden" value="{{ project }}">
+<p>
+<script src='/static/lib/jquery/jquery.min.js'></script>
+<script src="/static/lib/sigma_grid/gt_grid_all.js"></script>
+<script src="/static/lib/sigma_grid/gt_msg_en.js"></script>
+<script src='/static/js/popup/popup_size.js'></script>
+<script src="/static/js/main/notice_manager_main.js"></script>
+</body>
+</html>

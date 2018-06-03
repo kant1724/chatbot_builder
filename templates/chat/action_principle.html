@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>action_principle</title>
+</head>
+<link rel="stylesheet" href="/static/css/chat/action_principle.css">
+<body>
+<button id="get_action_principle">결과보기</button>
+<p>
+<div>
+	<div>Question (질문을 입력 후 '결과보기'를 클릭하세요. 아래에 각 단계별 데이터 변환과정을 표시합니다.)</div>
+	<textarea id="my_question" rows="5" cols="100"></textarea>
+</div>
+<p>
+<div>
+	<div>Encoder Token Words (입력 토큰)</div>
+	<textarea readonly id="enc_token_words" rows="5" cols="100"></textarea>
+</div>
+<p>
+<div>
+	<div>Encoder Token Numbers (입력값, 빈도수가 많은 글자일 수록 값이 작습니다.)</div>
+	<textarea readonly id="enc_token_ids" rows="5" cols="100"></textarea>
+</div>
+<p>
+<div id="seq2seq">Seq2Seq Model (숫자연산)</div>
+<p>
+<div>
+	<div>Decoder Token Numbers (결과값)</div>
+	<textarea readonly id="dec_token_ids" rows="5" cols="100"></textarea>
+</div>
+<p>
+<div>
+	<div>Decoder Token Words (결과값에 대응하는 문자)</div>
+	<textarea readonly id="dec_token_words" rows="5" cols="100"></textarea>
+</div>
+<p>
+<div>
+	<div>Answer (답변)</div>
+	<textarea readonly id="answer" rows="5" cols="100"></textarea>
+</div>
+<p>
+<input id="user" type="hidden" value="{{ user }}">
+<input id="project" type="hidden" value="{{ project }}">
+<script src='/static/lib/jquery/jquery.min.js'></script>
+<script src="/static/js/chat/action_principle.js"></script>
+</body>
+</html>

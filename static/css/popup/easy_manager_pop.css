@@ -1,0 +1,66 @@
+#pager {
+	position: absolute;
+	top: 30px;
+	height: 20px;
+}
+
+#container {
+	position: absolute;
+	top: 80px;
+	height: 750px;
+	overflow: scroll;
+	border-top: 1px solid #BDBDBD;
+}
+
+.question {
+	position: relative;
+	left: 0px;
+	top: 10px;
+}
+
+.answer {
+	position: relative;
+	left: 20px;
+	top: 10px;
+}
+
+.btn {
+	position: relative;
+	top: 15px;
+	left: 5px;
+}
+
+.each {
+	position: relative;
+	width: 1000px;
+	height: 130px;
+	border-bottom: 1px solid #D5D5D5;
+	border-width: thin
+}
+
+.upper a {
+	position: relative;
+	top: 15px;
+	font-weight: 700;
+	font-size: 1.2em;
+}
+
+.div1 {
+	width: 1020px;
+    height: 32px;
+    background-color: #F6F6F6;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.div1-inner {
+	position: relative;
+	left: 5px;
+	top: 5px;
+}
+
+.put_emphasis {
+	position: relative;
+	left: 25px;
+	top: 5px;
+}

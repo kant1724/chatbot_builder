@@ -1,0 +1,32 @@
+#send_training_test_question {
+	position: absolute;
+	top: 15px;
+	left: 315px;
+	font-size: 0.7em;
+}
+
+#my_question_text {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	font-size: 0.7em;
+}
+
+#answer_text {
+	position: absolute;
+	top: 10px;
+	left: 400px;
+	font-size: 0.7em;
+}
+
+#my_question {
+	position: absolute;
+	top: 40px;
+	left: 20px;
+}
+
+#answer {
+	position: absolute;
+	top: 40px;
+	left: 400px;
+}

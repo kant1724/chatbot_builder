@@ -1,0 +1,44 @@
+body {
+	overflow: hidden;
+}
+
+.div1 {
+	position: relative;
+	width: 905px;
+	height: 65px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    background-color: #F6F6F6;
+}
+
+.div1-inner {
+	position: relative;
+	left: 5px;
+	top: 5px;
+}
+
+.div2 {
+	position: relative;
+	width: 905px;
+	height: 32px;
+	border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    background-color: #F6F6F6;
+}
+
+.div2-inner {
+	position: relative;
+	left: 5px;
+	top: 5px;
+}
+
+#start_training {
+	position: relative;
+	left: 5px;
+}
+
+#training_info {
+	position: relative;
+	top: -50px;
+	left: 330px;
+}

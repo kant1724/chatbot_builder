@@ -1,0 +1,27 @@
+.right-arrow {
+	position: relative;
+	width: 15px;
+	height: 15px;
+	top: 2.5px;
+}
+
+.question-mark {
+	position: relative;
+	width: 13px;
+	height: 13px;
+	top: 2px;
+}
+
+.exclamation-mark {
+	position: relative;
+	width: 15px;
+	height: 15px;
+	top: 3px;
+}
+
+.check-mark {
+	position: relative;
+	width: 15px;
+	height: 15px;
+	top: 3px;
+}

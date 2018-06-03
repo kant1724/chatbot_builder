@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>hwp_report</title>
+</head>
+<link rel="stylesheet" href="/static/css/button.css">
+<link rel="stylesheet" href="/static/css/icon.css">
+<link rel="stylesheet" href="/static/css/chat_popup/hwp_report_pop.css">
+<body>
+<input id="user" type="hidden" value="{{ user }}">
+<input id="project" type="hidden" value="{{ project }}">
+<input id="param_holder" type="hidden" value="{{ param_holder }}">
+<input id="file_ip" type="hidden" value="{{ file_ip }}">
+<input id="title" type="hidden" value="{{ title }}">
+<input id="file_path" type="hidden" value="{{ file_path }}">
+<script src='/static/lib/jquery/jquery.min.js'></script>
+<script src="/static/js/chat_popup/hwp_report_pop.js"></script>
+
+<object id=HwpCtrl style="left: 0px TOP: 0px" height=600 width=400% classid=CLSID:BD9C32DE-3155-4691-8972-097D53B10052>
+<param name="TOOLBAR_MENU" value="TRUE">
+<param name="TOOLBAR_STANDARD" value="TRUE">
+<param name="TOOLBAR_FORMAT" value="TRUE">
+<param name="TOOLBAR_DRAW" value="TRUE">
+<param name="TOOLBAR_TABLE" value="TRUE">
+<param name="TOOLBAR_IMAGE" value="TRUE">
+<param name="SHOW_TOOLBAR" value="TRUE">
+</object>
+</body>
+</html>

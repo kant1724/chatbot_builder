@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>i-Learning</title>
+		<link rel="stylesheet" href="/static/css/normalize.css">
+		<link rel="stylesheet" href="/static/css/icon.css">
+		<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+		<link rel='stylesheet prefetch' href='/static/lib/jquery/jquery.mCustomScrollbar.min.css'>
+		<link rel="stylesheet" href="static/css/chat/chat.css">
+		<script src="/static/lib/jquery/jquery-latest.js"></script>
+	</head>
+<div id="side-button-theme" onclick="change_background()">
+    <p id="side-button-theme-text">테마변경</p>
+</div>
+<div id="side-button-main" onclick="call_main_frame()">
+    <p id="side-button-main-text">관리자화면</p>
+</div>
+<div class="chat">
+	<div class="chat-title">
+		<h1>i-Learning</h1>
+		<h2>IBK-A.I ASK ME</h2>
+		<figure class="avatar">
+			<img src="static/res/ibk_logo.png" />
+		</figure>
+	</div>
+	<div id="left-board" class="messages">
+		<div id="scroll-down" class="messages-content"></div>
+	</div>
+	<div class="message-box">
+		<textarea class="message-input" placeholder="메세지를 입력하세요..."></textarea>
+		<button type="submit" class="message-submit">전송</button>
+	</div>
+</div>
+
+<div id="message2" class="reserve-list">
+	<div class="chat-title">
+		<div id="radio1" class="menu-radio">
+			<span class="radio-span">
+				<input id="msg2_radio_btn1" type="radio" name="msg2_radio" value="1">
+			    <label for="m2_radio_btn1">질문 자동완성</label>
+		   	</span>
+		   	<span class="radio-span">
+			    <input id="msg2_radio_btn1" type="radio" name="msg2_radio" value="2">
+			    <label for="m2_radio_btn2">내가 자주하는 질문</label>
+			</span>
+	    </div>
+	</div>
+	<div id="right-board" class="messages">
+		<div id="scroll-top" class="messages-content"></div>
+	</div>
+</div>
+<div id="message3" class="right-board">
+	<div class="right-board-title">
+		<div id="radio2" class="menu-radio">
+			<span class="radio-span">
+				<input id="msg3_radio_btn1" type="radio" name="msg3_radio" value="1">
+			    <label for="m3_radio_btn1">내 일정</label>
+		    </span>
+		    <!-- 
+			<span class="radio-span">
+				<input id="msg3_radio_btn2" type="radio" name="msg3_radio" value="2">
+			    <label for="m3_radio_btn2">그룹투표</label>
+		    </span>-->
+		    <span class="radio-span">
+			    <input id="msg3_radio_btn3" type="radio" name="msg3_radio" value="3">
+			    <label for="m3_radio_btn3">신규요청(MY)</label>
+			</span>
+		    <span class="radio-span">
+		    	<input id="msg3_radio_btn4" type="radio" name="msg3_radio" value="4">
+		    	<label for="m3_radio_btn4">신규요청(ALL)</label>
+		    </span>
+		    <span class="radio-span">
+			    <input id="msg3_radio_btn5" type="radio" name="msg3_radio" value="5">
+			    <label for="m3_radio_btn5"><img class="new-icon" src="static/res/new_icon.png"/>신규질문</label>
+			</span>			
+	    </div>	    
+	</div>
+	<div id="right-down-board" class="messages">
+		<div id="scroll-top" class="messages-content"></div>
+	</div>
+</div>
+<div class="bg"></div>
+<form id="form_dynamic_grid_pop" name="form_dynamic_grid_pop" method="post" action="dynamic_grid_pop" target="dynamic_grid_popup">
+	<input type="hidden" id="dynamic_grid_user" name="user" value="">
+    <input type="hidden" id="dynamic_grid_project" name="project" value="">
+    <input type="hidden" id="dynamic_grid_param_holder" name="param_holder" value="">
+    <input type="hidden" id="dynamic_grid_title" name="title" value="">
+    <input type="hidden" id="dynamic_grid_column_info" name="column_info" value="">
+    <input type="hidden" id="dynamic_grid_content" name="content" value="">
+</form>
+<form id="form_dynamic_info_pop" name="form_dynamic_info_pop" method="post" action="dynamic_info_pop" target="dynamic_info_popup">
+    <input type="hidden" id="dynamic_info_user" name="user" value="">
+    <input type="hidden" id="dynamic_info_project" name="project" value="">
+    <input type="hidden" id="dynamic_info_param_holder" name="project" value="">
+    <input type="hidden" id="dynamic_info_title" name="title" value="">
+    <input type="hidden" id="dynamic_info_column_info" name="column_info" value="">
+    <input type="hidden" id="dynamic_info_content" name="content" value="">
+</form>
+<form id="form_hwp_report_pop" name="form_hwp_report_pop" method="post" action="hwp_report_pop" target="hwp_report_popup">
+    <input type="hidden" id="hwp_report_user" name="user" value="">
+    <input type="hidden" id="hwp_report_project" name="project" value="">
+    <input type="hidden" id="hwp_report_param_holder" name="param_holder" value="">
+    <input type="hidden" id="hwp_report_title" name="title" value="">
+    <input type="hidden" id="hwp_report_file_path" name="file_path" value="">
+</form>
+<input id="user" type="hidden" value="{{ user }}">
+<input id="project" type="hidden" value="{{ project }}">
+<input id="notice_list" type="hidden" value="{{ notice_list }}">
+<script src='/static/lib/jquery/jquery.min.js'></script>
+<script src='/static/lib/jquery/jquery.mCustomScrollbar.concat.min.js'></script>
+<script src='/static/js/popup/popup_size.js'></script>
+<script src="/static/js/chat/chat.js"></script>
+</body>
+</html>

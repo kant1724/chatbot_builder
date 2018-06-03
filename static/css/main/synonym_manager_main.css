@@ -1,0 +1,27 @@
+.div1 {
+	width: 905px;
+    height: 32px;
+    background-color: #F6F6F6;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.div1-inner {
+	position: relative;
+	left: 5px;
+	top: 5px;
+}
+
+.div2 {
+	width: 905px;
+    height: 32px;
+    background-color: #F6F6F6;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.div2-inner {
+	position: relative;
+	left: 5px;
+	top: 5px;
+}

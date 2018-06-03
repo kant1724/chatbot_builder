@@ -1,0 +1,53 @@
+.div1 {
+	position: relative;
+	width: 905px;
+	height: 32px;
+	border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    background-color: #F6F6F6;
+}
+
+.div1-inner {
+	position: relative;
+	left: 5px;
+	top: 5px;
+}
+
+#update_voca_synonym {
+	position: relative;
+	left: 5px;
+}
+
+.div2 {
+	position: relative;
+	width: 905px;
+	height: 60px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    background-color: #F6F6F6;
+}
+
+.div2-inner {
+	position: relative;
+	left: 5px;
+	top: 5px;
+}
+
+.div3 {
+	position: relative;
+	width: 905px;
+	border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    background-color: #F6F6F6;
+}
+
+.div3-inner {
+	position: relative;
+	left: 5px;
+	top: 5px;
+}
+
+#start_updating {
+	position: relative;
+	left: 5px;
+}

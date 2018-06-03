@@ -1,0 +1,76 @@
+.text-highlight {
+	background-color: yellow;
+}
+
+#compare_window {
+	position: absolute;
+	left: 635px;
+	top: 10px;
+	width: 250px;
+	height: 740px;
+	border: 1px solid gray;
+    background-color: #F6F6F6;
+}
+
+#compare_title {
+	background: rgba(0, 0, 0, 0.2);
+    height: 30px;
+    border-bottom: 1px solid gray;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #4C4C4C;
+}
+
+#compare_title_text {
+	position:absolute;
+	top: 5px;
+	left: 90px;
+}
+
+#compare_result {
+	position: absolute;
+	top: 50px;
+	left: 5px;
+}
+
+.div1 {
+	width: 600px;
+    height: 32px;
+    background-color: #F6F6F6;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.div1-inner {
+	position: relative;
+	left: 5px;
+	top: 5px;
+}
+
+.div2 {
+	width: 600px;
+	height: 32px;
+    background-color: #F6F6F6;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.div2-inner {
+	position: relative;
+	left: 5px;
+	top: 5px;
+}
+
+.div3 {
+	width: 600px;
+	height: 32px;
+    background-color: #F6F6F6;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.div3-inner {
+	position: relative;
+	left: 5px;
+	top: 5px;
+}

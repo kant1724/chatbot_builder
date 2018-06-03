@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Log-in</title>
+      <link rel="stylesheet" href="/static/css/login/login.css">
+</head>
+<body>
+  <div class="login-card">
+      <h1>i-Learning</h1><br>
+	  <div id="msg"></div>
+	  <p>
+	  <input id="user" value="{{ user }}" type="text" name="user" placeholder="Username">
+	  <input id="password" type="password" name="password" placeholder="Password">
+	  <input id="project" type="text" name="project" placeholder="Projectname">
+	  <input id="login" type="submit" name="login" class="login login-submit" value="로그인">
+	  <input id="logout" type="hidden" value="{{ logout }}">
+	  <input id="run_chat" type="hidden" value="{{ run_chat }}">
+	  <div class="login-help">
+	    <a href="#">등록요청</a>
+	  </div>
+  </div>
+  <form name="loading" id="loading" method="post" action="/loading" target="loading_page">
+	  <input id="chat_user" type="hidden" name="user" value="{{ user }}">
+	  <input id="chat_project" type="hidden" name="project" value="{{ project }}">
+	  <input type="hidden" name="emno" value="">
+	  <input type="hidden" id="room_name" name="room_name">
+	  <input type="hidden" id="gubun" name="gubun" value="1">
+  </form>
+<script src='/static/lib/jquery/jquery.min.js'></script>
+<script src='/static/js/popup/popup_size.js'></script>
+<script src="/static/js/login/login.js"></script>
+</body>
+</html>

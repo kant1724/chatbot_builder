@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>bucket_manager</title>
+</head>
+<link rel="stylesheet" href="/static/css/button.css">
+<link rel="stylesheet" href="/static/css/icon.css">
+<link rel="stylesheet" href="/static/css/main/bucket_manager_main.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/gt_grid.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/skin/vista/skinstyle.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/skin/mac/skinstyle.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/sigma_grid/skin/pink/skinstyle.css">
+<body>
+<div class="div1">
+	<div class="div1-inner">
+		<img class="right-arrow" src="static/res/right_arrow.png" />&nbsp;
+		<input id="subject" type="text" name="subject" size="35">
+		<button id="search_question_and_bucket_id">조회</button>
+	</div>
+</div>
+<p>
+<div id="bucket_grid"></div>
+<p>
+<div class="div2">
+	<div class="div2-inner">
+		<img class="right-arrow" src="static/res/right_arrow.png" />&nbsp;<a>버킷,답변 별 질문내역 </a>
+	</div>
+</div>
+<p>
+<div id="question_grid"></div>
+<input id="bucket_id" type="hidden">
+<input id="user" type="hidden" value="{{ user }}">
+<input id="project" type="hidden" value="{{ project }}">
+<input id="answer_num" type="hidden" name="answer_num" size="15">
+<input id="question_nm" type="hidden" name="question_nm" size="25">
+<script src='/static/lib/jquery/jquery.min.js'></script>
+<script src="/static/lib/sigma_grid/gt_grid_all.js"></script>
+<script src="/static/lib/sigma_grid/gt_msg_en.js"></script>
+<script src="/static/js/main/bucket_manager_main.js"></script>
+<script src="/static/js/util/highlight.js"></script>
+</body>
+</html>

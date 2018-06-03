@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>new_tag</title>
+</head>
+<link rel="stylesheet" href="/static/css/button.css">
+<body>
+<h3>
+	신규태그 입력
+</h3>
+<div>태그명</div>
+<input id="tag_nm" type="text">
+<div>한글명</div>
+<input id="kor_nm" type="text">
+<div>구분</div>
+<select id="gubun">
+	  <option value="">선택</option>
+	  <option value="from">from</option>
+	  <option value="select">select</option>
+	  <option value="where">where</option>
+	  <option value="action">action</option>
+	</select>
+<button id="submit_tag">서버로 전송(저장)</button>
+<script src='/static/lib/jquery/jquery.min.js'></script>
+<script src="/static/js/popup/new_tag_pop.js"></script>
+</body>
+</html>

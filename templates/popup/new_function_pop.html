@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>new_function</title>
+</head>
+<link rel="stylesheet" href="/static/css/button.css">
+<body>
+<h3>
+	신규기능 입력
+</h3>
+<button id="new_tag_pop">신규태그</button>
+<p>
+<div>어디에서?
+	<select id="from">
+	  <option value="">선택</option>
+	</select>
+</div>
+
+<div>무엇을?
+	<select id="select">
+	  <option value="">선택</option>
+	</select>
+</div>
+
+<div>무슨 조건으로?
+	<select id="where">
+	  <option value="">선택</option>
+	</select>
+</div>
+
+<div>어떻게 해줘?
+	<select id="action">
+	  <option value="">선택</option>
+	</select>
+</div>
+<p>
+<button id="create_function">기능생성</button>
+<p>
+<div>텍스트</div>
+<textarea id="text_input" rows="5" cols="100" readonly></textarea>
+<div>태그</div>
+<textarea id="tag_input" rows="5" cols="100"></textarea>
+<p>
+<button id="submit_function">서버로 전송(저장)</button>
+<input id="user" type="hidden" value="{{ user }}">
+<input id="project" type="hidden" value="{{ project }}">
+<input id="answer" type="hidden">
+<script src='/static/lib/jquery/jquery.min.js'></script>
+<script src='/static/js/popup/popup_size.js'></script>
+<script src="/static/js/popup/new_function_pop.js"></script>
+</body>
+</html>

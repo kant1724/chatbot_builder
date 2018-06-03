@@ -1,0 +1,32 @@
+body {
+	overflow: hidden;
+}
+
+.div1 {
+	width: 98%;
+    height: 32px;
+    background-color: #F6F6F6;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.div1-inner {
+	position: relative;
+	left: 5px;
+	top: 5px;
+}
+
+#dynamic_title {
+	font-weight: 700;
+	color: blue;	
+}
+
+#question {
+    position: relative;
+    left: 5px;
+    width: 700px;
+    padding: 8px 18px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
