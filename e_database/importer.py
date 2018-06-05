@@ -5,8 +5,8 @@ def create_question_builder_table(user, project):
     try:
         update.commit(sql)
     except:
-        print("QUESTION_BUILDER table already exists")
-
+        print("QUESTION_QUESTION_BUILDER table already exists")
+        
 def create_question_fragment_builder_table(user, project):
     sql = "CREATE TABLE QUESTION_FRAGMENT_BUILDER_" + user + "_" + project + " (ANSWER_NUM VARCHAR(500), QUESTION_SRNO INT(7), QUESTION VARCHAR(500), QUESTION_VOCA VARCHAR(500))"
     try:
@@ -57,7 +57,7 @@ def create_project_list_table():
         print("PROJECT_LIST table already exists")
     
 def create_question_list_table():
-    sql = "CREATE TABLE QUESTION_LIST (QUESTION VARCHAR(500), ANSWER_NUM VARCHAR(10), RGSN_DATE VARCHAR(20), RGSN_TIME VARCHAR(10))"
+    sql = "CREATE TABLE QUESTION_LIST (QUESTION VARCHAR(500), ANSWER_NUM VARCHAR(10), RGSN_DATE VARCHAR(20), RGSN_TIME VARCHAR(10), USER_IP VARCHAR(20))"
     try:
         update.commit(sql)
     except:
@@ -161,7 +161,11 @@ def import_question_builder(user, project, arr):
 def import_answer_builder(user, project, arr):
     sql = "INSERT INTO ANSWER_BUILDER_" + user + "_" + project + " VALUES ('" + arr[0] + "', '" + arr[1] + "', '" + arr[2] + "', '" + arr[3] + "', " + arr[4] + ", '" + arr[5] + "', " + arr[6] + ", '" +  arr[7] + "', '" +  arr[8] + "')"
     update.commit(sql)
-    
+
+def import_compression_tag(user, project, arr):
+    sql = "INSERT INTO COMPRESSION_TAG_" + user + "_" + project + " VALUES ('" + arr[0] + "', '" + arr[1] + "', '" + arr[2] + "')"
+    update.commit(sql)
+
 def import_training_config_list(user, project, arr):
     sql = "INSERT INTO TRAINING_CONFIG_LIST_" + user + "_" + project + " VALUES ('" + arr[0] + "', '" + arr[1] + "')"
     update.commit(sql)

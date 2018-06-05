@@ -43,3 +43,14 @@ def dialogue_list_exporter():
             else:
                 fw1.write(str(rr[i]).replace('\n', ' '))
         fw1.write("\n")
+                
+def compression_tag_exporter(user, project):
+    fw1 = open('./a_builder/exporter/data/compression_tag_' + user + '_' + project, 'w', encoding='utf8')
+    result = exporter.get_compression_tag(user, project)
+    for rr in result:
+        for i in range(len(rr)):
+            if i < len(rr) - 1:
+                fw1.write(str(rr[i]).replace('\n', ' ') + "^")
+            else:
+                fw1.write(str(rr[i]).replace('\n', ' '))
+        fw1.write("\n")

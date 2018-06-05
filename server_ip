@@ -2,6 +2,6 @@ builder_ip=127.0.0.1
 tf_ip=127.0.0.1:5001
 tf_compression_tag_ip=127.0.0.1:5001
 file_ip=127.0.0.1:5005
-db_host_ip=10.100.1.53
+db_host_ip=14.63.168.58
 group_chat_ip=127.0.0.1:5006
 external_adapter_ip=127.0.0.1:5007

@@ -1,0 +1,15 @@
+1^@where:ymd^0000년00월00일^where
+2^@where:brnc^지점명^where
+3^@where:vendor^업체명^where
+4^@from:layout_cnwr^전체레이아웃공사^from
+5^@select:all^전체내역^select
+6^@action:export_excel^엑셀로 뽑아줘^action
+7^@from:budget^예산^from
+8^@from:estimate^견적^from
+10^@select:exec_status^집행현황^select
+11^@where:cur_year^올해^where
+12^@action:print_screen^보여줘^action
+13^@action:call_phone^전화걸어줘^action
+14^@where:location^지역^where
+15^@select:method^대응방법^select
+16^@from:manual^매뉴얼^from

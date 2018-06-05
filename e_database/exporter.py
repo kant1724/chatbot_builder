@@ -7,13 +7,19 @@ def get_question_builder(user, project):
     return result
     
 def get_question_fragment_builder(user, project):
-    sql = "SELECT ANSWER_NUM, QUESTION_SRNO, QUESTION FROM QUESTION_FRAGMENT_BUILDER_" + user + "_" + project
+    sql = "SELECT ANSWER_NUM, QUESTION_SRNO, QUESTION, QUESTION_VOCA FROM QUESTION_FRAGMENT_BUILDER_" + user + "_" + project
+    result = select.fetch(sql)
+    
+    return result
+
+def get_compression_tag(user, project):
+    sql = "SELECT COMPRESSION_NUM, EXPRESSION, TAG_NAME FROM COMPRESSION_TAG_" + user + "_" + project
     result = select.fetch(sql)
     
     return result
     
 def get_answer_builder(user, project):
-    sql = "SELECT ANSWER_NUM, ANSWER, CATEGORY_NUM, RPSN_QUESTION, IMAGE_CNT, RGSN_USER_IP, RQ_NUM FROM ANSWER_BUILDER_" + user + "_" + project
+    sql = "SELECT ANSWER_NUM, ANSWER, CATEGORY_NUM, RPSN_QUESTION, IMAGE_CNT, RGSN_USER_IP, RQ_NUM, FRST_RGSN_DATE, MDFC_RGSN_DATE FROM ANSWER_BUILDER_" + user + "_" + project
     result = select.fetch(sql)
     
     return result

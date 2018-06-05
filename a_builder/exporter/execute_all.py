@@ -16,11 +16,9 @@ def start():
     collector_exporter.wrong_answer_exporter()
     
     config_exporter.training_config_list_exporter('chatbot_tft', 'fund')
-    config_exporter.training_config_list_exporter('chatbot_tft', 'test')
-    config_exporter.training_config_list_exporter('chatbot_tft', 'fragment')
+    config_exporter.training_config_list_exporter('chatbot_tft', 'test')    
     
-    config_exporter.chatbot_config_list_exporter('chatbot_tft', 'fund')
-    config_exporter.chatbot_config_list_exporter('chatbot_tft', 'fragment')
+    config_exporter.chatbot_config_list_exporter('chatbot_tft', 'fund')    
     config_exporter.chatbot_config_list_exporter('chatbot_tft', 'test')
     
     login_info_exporter.project_list_exporter()
@@ -28,14 +26,14 @@ def start():
     
     qna_exporter.answer_builder_exporter('chatbot_tft', 'fund')
     qna_exporter.answer_builder_exporter('chatbot_tft', 'test')
-    qna_exporter.answer_builder_exporter('chatbot_tft', 'fragment')
     qna_exporter.question_builder_exporter('chatbot_tft', 'fund')
     qna_exporter.question_builder_exporter('chatbot_tft', 'test')
-    qna_exporter.question_builder_exporter('chatbot_tft', 'fragment')
     qna_exporter.question_fragment_builder_exporter('chatbot_tft', 'fund')
-    qna_exporter.question_fragment_builder_exporter('chatbot_tft', 'test')
-    qna_exporter.question_fragment_builder_exporter('chatbot_tft', 'fragment')
+    qna_exporter.question_fragment_builder_exporter('chatbot_tft', 'test')    
     qna_exporter.dialogue_list_exporter()
+    
+    qna_exporter.compression_tag_exporter('chatbot_tft', 'fund')
+    
     
     schedule_exporter.schedule_exporter()
     
