@@ -4,7 +4,7 @@ var $messages = $('.messages-content'),
 
 $(window).load(function() {
 	$messages.mCustomScrollbar();
-	var text = "저는 펀드업무의 궁금점을 풀어 주는 인공지능 i-Learning이라고 해요^^<br>펀드업무에 관하여 무엇이던지 물어보세요 ^^<br>하지만 아직 많이 부족하고 많은 관심이 저를 더욱더 성장하게 만든답니다.<br>저를 많이 사용해주시고 학습시켜 주세요^^";
+	var text = "저는 i-Learning이라고 해요<br>펀드에 관하여 무엇이던지 물어보세요 ^^<br>아직 많이 부족하지만 많은 관심이 저를 더욱더 성장하게 만든답니다.";
 	reply_answer(text);
 	var notice_list = eval($('#notice_list').val());
 	for (var i = 0; i < notice_list.length; ++i) {
@@ -127,7 +127,7 @@ $('#radio2 input:radio').click(function() {
 });
 
 function reply_answer(text) {
-	$('<div class="message new"><figure class="avatar"><img src="/static/res/kieunsen.jpg" /></figure>' + text + '</div>').appendTo($('#left-board .mCSB_container')).addClass('new');
+	$('<div class="message new"><figure class="avatar"><img src="/static/res/ai_image2.jpeg" /></figure>' + text + '</div>').appendTo($('#left-board .mCSB_container')).addClass('new');
 }
 
 $(window).on('keydown', function(e) {

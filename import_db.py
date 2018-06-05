@@ -4,5 +4,5 @@ from a_builder.importer import config_importer
 from a_builder.importer import voca_importer
 from a_builder.importer import create_all_tables
 
-config_importer.training_config_list_importer('chatbot_tft', 'fund')
-config_importer.chatbot_config_list_importer('chatbot_tft', 'fund')
+qna_importer.answer_builder_importer('chatbot_tft', 'fund')
+qna_importer.question_builder_importer('chatbot_tft', 'fund')
