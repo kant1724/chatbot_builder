@@ -154,6 +154,13 @@ def create_wrong_answer_table():
     except:
         print("WRONG_ANSWER table already exists")
 
+def create_notice_list_table(user, project):
+    sql = "CREATE TABLE NOTICE_LIST_CHATBOT_" + user + "_" + project + " (NOTICE_NUM INT(7), NOTICE_SUBJECT VARCHAR(500), NOTICE_CONTENT VARCHAR(5000), IMAGE_CNT INT(3), RGSN_DATE VARCHAR(20), NOTICE_START_DATE VARCHAR(20), NOTICE_END_DATE VARCHAR(20), COMPLETE_YN VARCHAR(1))"
+    try:
+        update.commit(sql)
+    except:
+        print("NOTICE_LIST table already exists")
+
 def import_question_builder(user, project, arr):
     sql = "INSERT INTO QUESTION_BUILDER_" + user + "_" + project + " VALUES ('" + arr[0] + "', '" + arr[1] + "', '" + arr[2] + "', '" + arr[3] + "', '" + arr[4] + "')"
     update.commit(sql)
