@@ -127,7 +127,7 @@ $('#radio2 input:radio').click(function() {
 });
 
 function reply_answer(text) {
-	$('<div class="message new"><figure class="avatar"><img src="/static/res/ai_image2.jpeg" /></figure>' + text + '</div>').appendTo($('#left-board .mCSB_container')).addClass('new');
+	$('<div class="message new"><figure class="avatar"><img src="/static/res/ai_image2.jpg" /></figure>' + text + '</div>').appendTo($('#left-board .mCSB_container')).addClass('new');
 }
 
 $(window).on('keydown', function(e) {
@@ -184,7 +184,7 @@ function sendFile(send_file) {
         processData: false,
         contentType: 'application/json',
         success: function(res) {
-        	$('<div class="message new"><figure class="avatar"><img src="/static/res/kieunsen.jpg" /></figure>' + res['text'] + '</div>').appendTo($('#left-board .mCSB_container')).addClass('new');
+        	$('<div class="message new"><figure class="avatar"><img src="/static/res/ai_image2.jpg" /></figure>' + res['text'] + '</div>').appendTo($('#left-board .mCSB_container')).addClass('new');
         	updateScrollbar();
         }
      });
@@ -399,7 +399,7 @@ function noRequestNewAnswer(msg_count) {
 }
 
 function interact(message){
-	$('<div class="message loading new"><figure class="avatar"><img src="/static/res/kieunsen.jpg" /></figure><span></span></div>').appendTo($('#left-board .mCSB_container'));
+	$('<div class="message loading new"><figure class="avatar"><img src="/static/res/ai_image2.jpg" /></figure><span></span></div>').appendTo($('#left-board .mCSB_container'));
 	$.post('/message', {
 		user : $('#user').val(),
 		project : $('#project').val(),
@@ -430,7 +430,7 @@ function interact(message){
 		    }
 	    }
 	    if (reply['right_yn'] != '') {
-	    	$('<div id=' + message_count + ' class="message new"><figure class="avatar"><img src="/static/res/kieunsen.jpg" /></figure>' + reply['right_yn'] + '</div>').appendTo($('#left-board .mCSB_container')).addClass('new');
+	    	$('<div id=' + message_count + ' class="message new"><figure class="avatar"><img src="/static/res/ai_image2.jpg" /></figure>' + reply['right_yn'] + '</div>').appendTo($('#left-board .mCSB_container')).addClass('new');
 	    }
 	    if (reply['right_yn'] != '' && Number(reply['num']) == 1) {
 	    	question.push(reply['qst']);
@@ -481,7 +481,7 @@ function get_schedule() {
 	}).done(function(reply) {
 		for (var i = 0; i < reply.length; ++i) {
 			var msg = "아래 일정의 예약시간이 되었습니다.<br>" + reply[i]['message'];
-			$('<div class="message schedule"><figure class="avatar"><img src="/static/res/kieunsen.jpg" /></figure>' + msg + '</div>').appendTo($('#left-board .mCSB_container')).addClass('new');
+			$('<div class="message schedule"><figure class="avatar"><img src="/static/res/ai_image2.jpg" /></figure>' + msg + '</div>').appendTo($('#left-board .mCSB_container')).addClass('new');
 			setMySchedule();
 		}
 	}).fail(function() {
