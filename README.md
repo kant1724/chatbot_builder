@@ -1,5 +1,5 @@
 # chatbot_builder
-Korean Chatbot Build Platform
+Korean Chatbot Building Platform
 ```
 python build.py
 ```
