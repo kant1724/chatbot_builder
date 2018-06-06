@@ -5,7 +5,7 @@ python build.py
 ```
 
 ## Chatbot Platform
-this chatbot platform to build chatbot effeciently.
+this chatbot platform is to build chatbot effeciently.
 
 1. training session : you can train chatbot online, while training is in progress, you can test how much the bot is trained
 2. running session : when you runs chatbot, it lets you find the right question by automatic question making function.
