@@ -16,6 +16,7 @@ def login_try(request):
         return {'msg' : msg, 'success' : 'N'}
     else:
         emno = db_login.get_emno(request.remote_addr)
+        db_login.insert_login_list(request.remote_addr)
         return {'msg' : '', 'success' : 'Y', 'emno' : emno}
     
 def login(request):

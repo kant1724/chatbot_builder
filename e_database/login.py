@@ -1,4 +1,5 @@
 from e_database.sql_processor import select
+from e_database.sql_processor import update
 
 def get_password(user_id):    
     sql = "SELECT PASSWORD FROM USER_INFO WHERE USER_ID = '" + user_id + "'"    
@@ -23,3 +24,7 @@ def get_emno(user_ip):
     for r in result:
         emno = r[0]
     return emno
+
+def insert_login_list(user_ip):
+    sql = "INSERT INTO LOGIN_LIST VALUES ('" + user_ip + "', 'CAST(DATE_FORMAT(NOW(), '%Y%m%d') AS CHAR)', 'CAST(DATE_FORMAT(NOW(), '%H%i%s') AS CHAR)')"
+    update.commit(sql)
