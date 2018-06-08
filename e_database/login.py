@@ -26,5 +26,5 @@ def get_emno(user_ip):
     return emno
 
 def insert_login_list(user_ip):
-    sql = "INSERT INTO LOGIN_LIST VALUES ('" + user_ip + "', 'CAST(DATE_FORMAT(NOW(), '%Y%m%d') AS CHAR)', 'CAST(DATE_FORMAT(NOW(), '%H%i%s') AS CHAR)')"
+    sql = "INSERT INTO LOGIN_LIST VALUES ('" + user_ip + "', CAST(DATE_FORMAT(NOW(), '%Y%m%d') AS CHAR), CAST(DATE_FORMAT(NOW(), '%H%i%s') AS CHAR))"
     update.commit(sql)
