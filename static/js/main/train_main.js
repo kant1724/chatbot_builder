@@ -123,7 +123,7 @@ function get_is_training() {
 }
 
 function get_training_info_callback(training_info, saving_step) {
-	if (training_info.indexOf("현재스텝") != -1) {
+	if (training_info.indexOf("Current step") != -1) {
 		$('#show_testing').show();
 	} else {
 		$('#show_testing').hide();
