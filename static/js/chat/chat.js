@@ -11,7 +11,7 @@ $(window).load(function() {
 		var notice = notice_list[i].replace('\n', '<br>');
 		reply_answer(notice);
 	}
-	setMySchedule();
+	getNewQuestion();
 });
 
 function updateScrollbar() {
@@ -99,7 +99,7 @@ $(".message-input").on('input', function() {
 });
 
 $('input:radio[name="msg2_radio"]').filter('[value="1"]').attr('checked', true);
-$('input:radio[name="msg3_radio"]').filter('[value="1"]').attr('checked', true);
+$('input:radio[name="msg3_radio"]').filter('[value="5"]').attr('checked', true);
 
 $('#radio1 input:radio').click(function() {
 	$('#message2 .mCSB_container').empty();
