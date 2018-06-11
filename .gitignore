@@ -1,5 +1,5 @@
 *.pyc
-ip_addr
-server_ip
-.project
-.pydevproject
+ip_addr.*
+server_ip.*
+*.project
+*.pydevproject
