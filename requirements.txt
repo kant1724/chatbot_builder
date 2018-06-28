@@ -1,0 +1,8 @@
+pandas==0.20.3
+requests==2.18.4
+PyMySQL==0.8.0
+numpy==1.13.3
+Flask==0.12.2
+Flask_Cors==3.0.3
+beautifulsoup4==4.6.0
+python_dateutil==2.7.3
