@@ -51,23 +51,15 @@ $(document).ready(function() {
 		search_compression_tag();
 	});
 	$("#add_row").click(function() {
-		alert("제한된 기능입니다.");
-		return;
 		add_row();
 	});
 	$("#del_row").click(function() {
-		alert("제한된 기능입니다.");
-		return;
 		del_row();
 	});
 	$("#submit_compression_tag").click(function() {
-		alert("제한된 기능입니다.");
-		return;
 		submit_compression_tag();
 	});
 	$("#delete_ckpt_file").click(function() {
-		alert("제한된 기능입니다.");
-		return;
 		delete_ckpt_file();
 	});
 	start_interval_is_training();

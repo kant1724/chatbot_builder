@@ -1,17 +1,11 @@
 $(document).ready(function() {
 	$('#add_image').click(function() {
-		alert("제한된 기능입니다.");
-		return;
 		add_image();
 	});
 	$('#modify_image').click(function() {
-		alert("제한된 기능입니다.");
-		return;
 		modify_image();
 	});
 	$('#delete_image').click(function() {
-		alert("제한된 기능입니다.");
-		return;
 		delete_image();
 	});
 	$("#image_file").change(function() {

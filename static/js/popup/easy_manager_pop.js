@@ -44,8 +44,6 @@ function search_answer() {
 }
 
 function modify_answer(div_id) {
-	alert("제한된 기능입니다.");
-	return;
 	var div = $('#' + div_id);
 	var answer_num = div.find("#answer_num").val();
 	var category_num = div.find("#category_num").val();

@@ -48,13 +48,9 @@ $(document).ready(function() {
 		new_voca();
 	});
 	$("#submit_voca").click(function() {
-		alert("제한된 기능입니다.");
-		return;
 		submit_voca();
 	});
 	$("#delete_voca").click(function() {
-		alert("제한된 기능입니다.");
-		return;
 		delete_voca();
 	});
 	$("#submit_voca_keyword").click(function() {

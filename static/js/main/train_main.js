@@ -10,8 +10,6 @@ $(document).ready(function() {
 		}
 	});
 	$("#delete_ckpt_file").click(function() {
-		alert("제한된 기능입니다.");
-		return;
 		delete_ckpt_file();
 	});
 	$("#update_voca_and_question").click(function() {

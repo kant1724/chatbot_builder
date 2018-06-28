@@ -52,8 +52,6 @@ $(document).ready(function() {
 		auto_add_row();
 	});
 	$("#submit_question").click(function() {
-		alert("제한된 기능입니다.");
-		return;
 		submit_question();
 	});
 	$("#set_highlight").click(function() {

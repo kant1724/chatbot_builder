@@ -122,16 +122,12 @@ $(document).ready(function() {
 		add_image_pop();
 	});
 	$("#multiple_answer_pop").click(function() {
-		alert("제한된 기능입니다.");
-		return;
 		multiple_answer_pop();
 	});
 	$("#modify_answer_pop").click(function() {
 		modify_answer_pop();
 	});
 	$("#delete_answer").click(function() {
-		alert("제한된 기능입니다.");
-		return;
 		delete_answer();
 	});
 	$("#subject").keydown(function (key) {
@@ -140,8 +136,6 @@ $(document).ready(function() {
         }
     });
 	$("#delete_question").click(function() {
-		alert("제한된 기능입니다.");
-		return;
 		delete_question();
 	});
 	$("#update_question_voca_pop").click(function() {

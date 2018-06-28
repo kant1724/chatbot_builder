@@ -1,7 +1,5 @@
 $(document).ready(function() {
 	$("#submit_notice").click(function() {
-		alert("제한된 기능입니다.");
-		return;
 		submit_notice();
 	});
 	$("#notice_start_date").datepicker({

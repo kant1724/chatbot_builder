@@ -53,8 +53,6 @@ Sigma.Util.onLoad(Sigma.Grid.render(mygrid1));
 
 $(document).ready(function() {
 	$("#submit_answer").click(function() {
-		alert("제한된 기능입니다.");
-		return;
 		submit_answer();
 	});
 	$("#put_emphasis").click(function() {

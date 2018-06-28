@@ -1,7 +1,5 @@
 $(document).ready(function() {
 	$("#submit_training_config").click(function() {
-		alert("제한된 기능입니다.");
-		return;
 		submit_training_config();
 		submit_chatbot_config();
 	});
