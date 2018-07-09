@@ -35,3 +35,5 @@ it needs to interface with chatbot_tf, chatbot_file, chatbot_external_adapter, g
 
 4. Entity / Intent Manager : Entity and Intent Manager is the key element of the chatbot building project. It can be used to build
   a greater chatbot engine.
+
+<img src="http://14.63.168.58:3000/registered_image/capture3.png" width="700"/>
