@@ -5,7 +5,6 @@ $(document).ready(function() {
 	$("#put_emphasis").click(function() {
 		put_emphasis();
 	});
-	search_category();
 	if ($('#rq_num').val() != '') {
 		search_new_request_by_rq_num();
 	}	
