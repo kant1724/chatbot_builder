@@ -249,6 +249,8 @@ def reserve_list(request):
     return jsonify(res)
 
 def run_main_get_answer(request):
+    if enc_vocab == None:
+        chat_bot(request)
     req_dict = eval(request.data.decode('utf8'))
     user = req_dict['user']
     project = req_dict['project']
