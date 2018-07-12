@@ -121,6 +121,12 @@
 	border-left: 1px solid #ccc;
 }
 
+.right-content {
+	width: 310px;
+	height: 850px;
+	overflow: hidden;
+}
+
 .bottom-content {
 	position: absolute;
 	width: 750px;
