@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//templates/frame.html=UTF-8
+encoding//templates/main/entity_manager_main.html=UTF-8
 encoding//templates/main/qna_main.html=UTF-8
 encoding//templates/popup/new_answer_pop.html=UTF-8
 encoding//templates/popup/new_question_pop.html=UTF-8

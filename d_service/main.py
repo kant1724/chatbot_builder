@@ -51,6 +51,9 @@ def synonym_manager_main(request):
 def voca_manager_main(request): 
     return render_template("main/voca_manager_main.html")
 
+def entity_manager_main(request): 
+    return render_template("main/entity_manager_main.html")
+
 def category_manager_main(request): 
     return render_template("main/category_manager_main.html")
 

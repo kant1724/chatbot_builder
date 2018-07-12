@@ -276,6 +276,10 @@ def synonym_manager_main():
 def voca_manager_main(): 
     return main.voca_manager_main(request)
 
+@app.route("/entity_manager_main", methods=['GET'])
+def entity_manager_main(): 
+    return main.entity_manager_main(request)
+
 @app.route("/category_manager_main", methods=['GET'])
 def category_manager_main(): 
     return main.category_manager_main(request)
