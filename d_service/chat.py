@@ -193,7 +193,6 @@ def reply(request):
     
     return jsonify(res)
 
-
 def reply_dynamic_popup(request):
     user, project = request.form['user'], request.form['project']
     question = request.form['msg']
@@ -247,6 +246,22 @@ def reserve_list(request):
     else:
         res['bucket_range'] = buckets[bucket_id] + '~∞'
 
+    return jsonify(res)
+
+def run_main_get_answer(request):
+    req_dict = eval(request.data.decode('utf8'))
+    user = req_dict['user']
+    project = req_dict['project']
+    question = req_dict['msg']
+    _, answer_num = run.run_chatbot(enc_vocab, rev_dec_vocab, question, False, language)
+    if answer_num == '':
+        _, answer_num = run.run_chatbot(enc_vocab, rev_dec_vocab, question + ' ', False, language)
+    if len(answer_num.split(";")) > 1:
+        answer = '해당 질문에 대한 답변이 하나 이상입니다. 좀더 구체적으로 부탁드립니다!'
+    else:
+        answer = db_chat.get_answer_by_answer_num(user, project, answer_num)
+    res = {'answer' : answer}
+    
     return jsonify(res)
 
 def get_answer_dict(user, project):

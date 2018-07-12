@@ -552,5 +552,9 @@ def get_all_schedule():
 def send_file():
     return chat.send_file(request)
 
+@app.route("/run_main_get_answer", methods=['POST'])
+def run_main_get_answer(): 
+    return chat.run_main_get_answer(request)
+
 if (__name__ == "__main__"): 
     app.run(threaded=True, host=ip_addr, port = 5000) 

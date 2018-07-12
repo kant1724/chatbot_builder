@@ -1,4 +1,3 @@
-
 #run_chatbot.blue-button  {
 	position:absolute;
 	top: 170px;
@@ -119,6 +118,7 @@
 	width: 310px;
 	height: 850px;
 	border-left: 1px solid #ccc;
+	overflow: hidden;
 }
 
 .right-content {
