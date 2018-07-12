@@ -40,7 +40,7 @@
 	top: 30px;
 	width: 270px;
 	border-bottom: 1px solid #ccc;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 }
 
 #my_question_text {
@@ -62,7 +62,7 @@
 	top: 50px;
 	width: 270px;
 	border-bottom: 1px solid #ccc;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 }
 
 #answer_text {
@@ -84,7 +84,7 @@
 	top: 70px;
 	width: 270px;
 	border-bottom: 1px solid #ccc;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 }
 
 #extracted_entity_title {
@@ -101,7 +101,7 @@
 	top: 90px;
 	width: 270px;
 	border-bottom: 1px solid #ccc;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 }
 
 #right_point_title {
@@ -118,5 +118,10 @@
 	top: 110px;
 	width: 270px;
 	border-bottom: 1px solid #ccc;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
+}
+
+#right_point_text {
+	position: relative;
+	font-size: 0.8em;
 }

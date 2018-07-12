@@ -16,6 +16,7 @@ from c_engine.extension.image_processor import conv_net
 from e_database import notice as db_notice
 from e_database import training_config as db_training_config
 from d_service import properties
+from c_engine.core.error_detector import sentence_comparator
 
 buckets = []
 answer_dict_arr = []
@@ -262,7 +263,9 @@ def run_main_get_answer(request):
         answer = '해당 질문에 대한 답변이 하나 이상입니다. 좀더 구체적으로 부탁드립니다!'
     else:
         answer = db_chat.get_answer_by_answer_num(user, project, answer_num)
-    res = {'answer' : answer}
+    
+    _, point = sentence_comparator.compare_by_formula(user, project, question, answer_num)
+    res = {'answer' : answer, 'point' : point}
     
     return jsonify(res)
 

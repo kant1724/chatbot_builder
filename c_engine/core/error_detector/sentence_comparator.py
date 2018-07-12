@@ -33,9 +33,9 @@ def compare_by_formula(user, project, question, answer_num):
     res, point = error_detecting_util.compare_my_question_and_right_question(voca_and_appearance, weight, question, ";".join(right_question_voca_arr))
     print("point:" + str(point), "threshold:" + str(threshold), "weight:" + str(weight))
     if point < threshold:
-        return False
+        return False, point
 
-    return True
+    return True, point
 
 def compare_two(input_1, input_2, p_threshold):
     if p_threshold == 0.0:

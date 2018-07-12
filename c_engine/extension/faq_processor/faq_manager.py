@@ -10,7 +10,8 @@ def get_faq_answer(user, project, msg, answer_num, answer, question, message_cou
     trained_yn = False
     cnt = 0
     image_path = []
-    if sentence_comparator.compare_by_formula(user, project, question, answer_num) == False:
+    is_ok, _ = sentence_comparator.compare_by_formula(user, project, question, answer_num)
+    if  is_ok == False:
         msg.append(message_container.get_not_trained_message())
         right_yn = message_container.get_wrong_input_msg(message_count)
     else:
