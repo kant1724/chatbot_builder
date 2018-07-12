@@ -219,7 +219,7 @@ def reply_group_chat(request):
     if len(answer_num.split(";")) > 1:
         answer = '해당 질문에 대한 답변이 하나 이상입니다. 좀더 구체적으로 부탁드립니다!'
     else:
-        answer = db_chat.get_answer_by_answer_num(user, project, answer_num)
+        answer, _ = db_chat.get_answer_by_answer_num(user, project, answer_num)
     res = {'answer' : answer}
     
     return jsonify(res)
@@ -262,7 +262,7 @@ def run_main_get_answer(request):
     if len(answer_num.split(";")) > 1:
         answer = '해당 질문에 대한 답변이 하나 이상입니다. 좀더 구체적으로 부탁드립니다!'
     else:
-        answer = db_chat.get_answer_by_answer_num(user, project, answer_num)
+        answer, _ = db_chat.get_answer_by_answer_num(user, project, answer_num)
     
     _, point = sentence_comparator.compare_by_formula(user, project, question, answer_num)
     res = {'answer' : answer, 'point' : point}
