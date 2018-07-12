@@ -26,6 +26,10 @@
     background: transparent;	
 }
 
+#question:focus {
+	outline: none; 
+}
+
 #my_question_title {
 	position: relative;
 	left: 10px;
