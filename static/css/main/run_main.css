@@ -1,69 +1,97 @@
-#setting {
-	font-size: 0.7em;
+#question {
+	position: relative;
+    left: 10px;
+    top: 40px;
+    width: 270px;
+    padding: 8px 18px;
+    display: inline-block;
+    border: 1px solid #4C4C4C;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: transparent;	
 }
 
-#saving_step_text1 {
-	position: absolute;
-	left: 20px;
-	top: 270px;
-}
-
-#saving_step {
-	position: absolute;
-	left: 20px;
-	top: 285px;
-}
-
-#saving_step_text2 {
-	position: absolute;
-	left: 20px;
-	top: 310px;
-}
-
-#update_voca_and_question {
-	position: absolute;
-	width: 120px;
-	left: 20px;
-	top: 340px;
-	font-size: 0.7em;
-}
-
-#create_fragment {
-	position: absolute;
-	width: 120px;
-	left: 20px;
-	top: 370px;
-	font-size: 0.7em;	
-}
-
-#delete_ckpt_file {
-	position: absolute;
-	width: 120px;
-	left: 20px;
-	top: 400px;
-	font-size: 0.7em;
-}
-
-#start_training {
-	position: absolute;
-	width: 120px;
-	left: 20px;
-	top: 430px;	
-	font-size: 0.7em;
-}
-
-#training_info {
-	position: absolute;
+#my_question_title {
+	position: relative;
 	left: 10px;
-	top: 470px;	
+	top: 80px;
+	color: #747474;
 	font-size: 0.8em;
 }
 
-#show_testing {
-	display: none;
-	position: absolute;
-	width: 120px;
-	left: 20px;
-	top: 530px;	
-	font-size: 0.7em;
+#my_question {
+	position: relative;
+	left: 10px;
+	top: 80px;
+	width: 270px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
+}
+
+#answer_title {
+	position: relative;
+	left: 10px;
+	top: 110px;
+	color: #747474;
+	font-size: 0.8em;
+}
+
+#answer {
+	position: relative;
+	left: 10px;
+	top: 110px;
+	width: 270px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
+}
+
+#extracted_word_title {
+	position: relative;
+	left: 10px;
+	top: 140px;
+	color: #747474;
+	font-size: 0.8em;
+}
+
+#extracted_word {
+	position: relative;
+	left: 10px;
+	top: 140px;
+	width: 270px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
+}
+
+#extracted_entity_title {
+	position: relative;
+	left: 10px;
+	top: 170px;
+	color: #747474;
+	font-size: 0.8em;
+}
+
+#extracted_entity {
+	position: relative;
+	left: 10px;
+	top: 170px;
+	width: 270px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
+}
+
+#right_point_title {
+	position: relative;
+	left: 10px;
+	top: 200px;
+	color: #747474;
+	font-size: 0.8em;
+}
+
+#right_point {
+	position: relative;	
+	left: 10px;
+	top: 200px;
+	width: 270px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
 }

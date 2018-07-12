@@ -264,6 +264,10 @@ def new_notice_pop():
 def train_main(): 
     return main.train_main(request)
 
+@app.route("/run_main")
+def run_main(): 
+    return main.run_main(request)
+
 @app.route('/update_question_voca_main')
 def update_question_voca_main():
     return main.update_question_voca_main(request, updater_thread)
