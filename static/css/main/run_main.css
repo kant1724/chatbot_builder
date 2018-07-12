@@ -1,7 +1,22 @@
+#question_box {
+	position: relative;
+    width: 300;
+    height: 100;
+    background: #F6F6F6;
+}
+
+#input_title {
+	position: relative;
+	left: 15px;
+	top: 20px;
+	color: #747474;
+	font-size: 0.8em;
+}
+
 #question {
 	position: relative;
-    left: 10px;
-    top: 40px;
+    left: 15px;
+    top: 35px;
     width: 270px;
     padding: 8px 18px;
     display: inline-block;
@@ -14,7 +29,7 @@
 #my_question_title {
 	position: relative;
 	left: 10px;
-	top: 80px;
+	top: 30px;
 	color: #747474;
 	font-size: 0.8em;
 }
@@ -22,7 +37,7 @@
 #my_question {
 	position: relative;
 	left: 10px;
-	top: 80px;
+	top: 30px;
 	width: 270px;
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 20px;
@@ -31,7 +46,7 @@
 #answer_title {
 	position: relative;
 	left: 10px;
-	top: 110px;
+	top: 60px;
 	color: #747474;
 	font-size: 0.8em;
 }
@@ -39,7 +54,7 @@
 #answer {
 	position: relative;
 	left: 10px;
-	top: 110px;
+	top: 60px;
 	width: 270px;
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 20px;
@@ -48,7 +63,7 @@
 #extracted_word_title {
 	position: relative;
 	left: 10px;
-	top: 140px;
+	top: 90px;
 	color: #747474;
 	font-size: 0.8em;
 }
@@ -56,7 +71,7 @@
 #extracted_word {
 	position: relative;
 	left: 10px;
-	top: 140px;
+	top: 90px;
 	width: 270px;
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 20px;
@@ -65,7 +80,7 @@
 #extracted_entity_title {
 	position: relative;
 	left: 10px;
-	top: 170px;
+	top: 120px;
 	color: #747474;
 	font-size: 0.8em;
 }
@@ -73,7 +88,7 @@
 #extracted_entity {
 	position: relative;
 	left: 10px;
-	top: 170px;
+	top: 120px;
 	width: 270px;
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 20px;
@@ -82,7 +97,7 @@
 #right_point_title {
 	position: relative;
 	left: 10px;
-	top: 200px;
+	top: 150px;
 	color: #747474;
 	font-size: 0.8em;
 }
@@ -90,7 +105,7 @@
 #right_point {
 	position: relative;	
 	left: 10px;
-	top: 200px;
+	top: 150px;
 	width: 270px;
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 20px;
