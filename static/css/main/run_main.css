@@ -1,0 +1,69 @@
+#setting {
+	font-size: 0.7em;
+}
+
+#saving_step_text1 {
+	position: absolute;
+	left: 20px;
+	top: 270px;
+}
+
+#saving_step {
+	position: absolute;
+	left: 20px;
+	top: 285px;
+}
+
+#saving_step_text2 {
+	position: absolute;
+	left: 20px;
+	top: 310px;
+}
+
+#update_voca_and_question {
+	position: absolute;
+	width: 120px;
+	left: 20px;
+	top: 340px;
+	font-size: 0.7em;
+}
+
+#create_fragment {
+	position: absolute;
+	width: 120px;
+	left: 20px;
+	top: 370px;
+	font-size: 0.7em;	
+}
+
+#delete_ckpt_file {
+	position: absolute;
+	width: 120px;
+	left: 20px;
+	top: 400px;
+	font-size: 0.7em;
+}
+
+#start_training {
+	position: absolute;
+	width: 120px;
+	left: 20px;
+	top: 430px;	
+	font-size: 0.7em;
+}
+
+#training_info {
+	position: absolute;
+	left: 10px;
+	top: 470px;	
+	font-size: 0.8em;
+}
+
+#show_testing {
+	display: none;
+	position: absolute;
+	width: 120px;
+	left: 20px;
+	top: 530px;	
+	font-size: 0.7em;
+}
