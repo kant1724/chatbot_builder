@@ -112,6 +112,16 @@
 	height: 100%;
 }
 
+.right-window {
+	position: absolute;
+	left: 1115px;
+	top: 8px;
+	width: 310px;
+	height: 850px;
+	border: 1px solid gray;
+    background-color: #F6F6F6;
+}
+
 .bottom-content {
 	position: absolute;
 	width: 750px;
