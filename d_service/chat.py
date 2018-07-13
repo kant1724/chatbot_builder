@@ -3,6 +3,7 @@ from b_trainer.worker import run
 from b_trainer.file import training_file_manager
 from a_builder.util import util
 from e_database import question_and_answer as db_qna
+from e_database import voca as db_voca
 from e_database import chat as db_chat
 from e_database import enc_and_dec
 from flask import Flask, render_template, request
@@ -17,6 +18,7 @@ from e_database import notice as db_notice
 from e_database import training_config as db_training_config
 from d_service import properties
 from c_engine.core.error_detector import sentence_comparator
+from a_builder.util import voca_util
 
 buckets = []
 answer_dict_arr = []
@@ -26,20 +28,26 @@ message_count = 0
 p_threshold = 0.0
 enc_vocab = None
 rev_dec_vocab = None
+all_voca = None
 
 def chat_bot(request): 
-    global answer_num_and_rpsn_question, enc_vocab, rev_dec_vocab, language, buckets 
+    global answer_num_and_rpsn_question, enc_vocab, rev_dec_vocab, language, buckets, all_voca 
     req_dict = eval(request.data.decode('utf8'))
     user = req_dict['user']
     project = req_dict['project']
     language = db_training_config.get_project_language(user, project)
     enc_vocab, rev_dec_vocab = run.init_chatbot(user, project)
     answer_dict = training_file_manager.get_answer_and_answer_num(user, project)
+    all_voca = db_voca.search_voca_by_voca_nm('')
     answer_num_and_rpsn_question = db_chat.get_all_answer_num_and_rpsn_question(user, project)
     answer_dict_arr.append({"user" : user, "project" : project, "answer_dict" : answer_dict})
     buckets = db_training_config.get_bucket(user, project).split(",")
     
     return ''
+
+def reload_voca():
+    global all_voca
+    all_voca = db_voca.search_voca_by_voca_nm('')
 
 def chat_window(request):
     user = request.args.get('user')
@@ -263,9 +271,9 @@ def run_main_get_answer(request):
         answer = '해당 질문에 대한 답변이 하나 이상입니다. 좀더 구체적으로 부탁드립니다!'
     else:
         answer, _ = db_chat.get_answer_by_answer_num(user, project, answer_num)
-    
     _, point = sentence_comparator.compare_by_formula(user, project, question, answer_num)
-    res = {'answer' : answer, 'point' : point}
+    word = ",".join(voca_util.get_voca_from_question(question, all_voca))
+    res = {'answer' : answer, 'point' : point, 'word' : word}    
     
     return jsonify(res)
 

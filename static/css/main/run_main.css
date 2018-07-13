@@ -30,6 +30,9 @@
 	outline: none; 
 }
 
+#output_box {
+}
+
 #my_question_title {
 	position: relative;
 	left: 10px;
@@ -89,6 +92,11 @@
 	width: 270px;
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 10px;
+}
+
+#extracted_word_text {
+	position: relative;
+	font-size: 0.8em;
 }
 
 #extracted_entity_title {

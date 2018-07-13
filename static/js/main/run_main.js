@@ -38,8 +38,10 @@ function get_answer() {
 function run_main_get_answer_callback(data) {
 	var answer = data['answer'];
 	var point = data['point'];
+	var word = data['word'];
 	$('#my_question_text').html($("#question").val());
 	$('#answer_text').html(answer);
 	$('#right_point_text').html(point);
+	$('#extracted_word_text').html(word);
 	$("#question").val('');
 }
