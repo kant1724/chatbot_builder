@@ -4,9 +4,9 @@ from e_database.sql_processor import update
 def search_voca_by_voca_nm(voca_nm):
     sql = ''
     if voca_nm != None and voca_nm != '':
-        sql = "SELECT VOCA_NM, VOCA_SYNONYM, KEYWORD_YN FROM VOCA WHERE VOCA_NM LIKE '%" + voca_nm + "%'"
+        sql = "SELECT VOCA_NM, VOCA_SYNONYM, KEYWORD_YN, VOCA_ENTITY FROM VOCA WHERE VOCA_NM LIKE '%" + voca_nm + "%'"
     else:
-        sql = "SELECT VOCA_NM, VOCA_SYNONYM, KEYWORD_YN FROM VOCA"
+        sql = "SELECT VOCA_NM, VOCA_SYNONYM, KEYWORD_YN, VOCA_ENTITY FROM VOCA"
     result = select.fetch(sql)
     res = []
     for r in result:
@@ -14,6 +14,7 @@ def search_voca_by_voca_nm(voca_nm):
         res_dict['voca_nm'] = r[0]
         res_dict['voca_synonym'] = r[1]
         res_dict['keyword_yn'] = r[2]
+        res_dict['voca_entity'] = r[3]
         res.append(res_dict)
 
     return res
@@ -21,22 +22,23 @@ def search_voca_by_voca_nm(voca_nm):
 def search_voca_by_equal_voca_nm(voca_nm, keyword_yn):
     sql = ''
     if keyword_yn != '':
-        sql = "SELECT VOCA_NM, VOCA_SYNONYM, KEYWORD_YN FROM VOCA WHERE VOCA_NM = '" + voca_nm + "' AND KEYWORD_YN = '" + keyword_yn + "'"
+        sql = "SELECT VOCA_NM, VOCA_SYNONYM, KEYWORD_YN, VOCA_ENTITY FROM VOCA WHERE VOCA_NM = '" + voca_nm + "' AND KEYWORD_YN = '" + keyword_yn + "'"
     else:
-        sql = "SELECT VOCA_NM, VOCA_SYNONYM, KEYWORD_YN FROM VOCA WHERE VOCA_NM = '" + voca_nm + "'"
+        sql = "SELECT VOCA_NM, VOCA_SYNONYM, KEYWORD_YN, VOCA_ENTITY FROM VOCA WHERE VOCA_NM = '" + voca_nm + "'"
     result = select.fetch(sql)
     res = []
     for r in result:
         res_dict = {}
         res_dict['voca_nm'] = r[0]
         res_dict['voca_synonym'] = r[1]
-        res_dict['keyword_yn'] = r[2] 
+        res_dict['keyword_yn'] = r[2]
+        res_dict['voca_entity'] = r[3]
         res.append(res_dict)
 
     return res
 
-def insert_voca(voca_nm):
-    sql = "INSERT INTO VOCA VALUES ('" + voca_nm + "', '" + voca_nm + "', 'Y')"
+def insert_voca(voca_nm, entity_nm):
+    sql = "INSERT INTO VOCA VALUES ('" + voca_nm + "', '" + voca_nm + "', 'Y', '" + entity_nm + "')"
     update.commit(sql)
 
 def delete_voca_by_voca_nm(voca_nm):

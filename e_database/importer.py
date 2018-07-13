@@ -120,7 +120,7 @@ def create_user_info_table():
         print("USER_INFO table already exists")
 
 def create_voca_table():
-    sql = "CREATE TABLE VOCA (VOCA_NM VARCHAR(50), VOCA_SYNONYM VARCHAR(500), KEYWORD_YN VARCHAR(2))"
+    sql = "CREATE TABLE VOCA (VOCA_NM VARCHAR(50), VOCA_SYNONYM VARCHAR(500), KEYWORD_YN VARCHAR(2), VOCA_ENTITY VARCHAR(20))"
     try:
         update.commit(sql)
     except:
@@ -182,5 +182,5 @@ def import_chatbot_config_list(user, project, arr):
     update.commit(sql)
 
 def import_voca(arr):
-    sql = "INSERT INTO VOCA VALUES ('" + arr[0] + "', '" + arr[1] + "', '" + arr[2] + "')"
+    sql = "INSERT INTO VOCA VALUES ('" + arr[0] + "', '" + arr[1] + "', '" + arr[2] + "', '" + arr[3] + "')"
     update.commit(sql)

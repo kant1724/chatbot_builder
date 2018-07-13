@@ -3,6 +3,7 @@ from e_database import compression_tag as db_compression_tag
 from e_database import multiple_answer as db_multiple_answer
 from e_database import tag as db_tag
 from e_database import voca as db_voca
+from e_database import entity as db_entity
 from e_database import synonym as db_synonym
 from e_database import category as db_category
 from e_database import new_request as db_new_request
@@ -89,6 +90,13 @@ def search_voca(request):
     req_dict = eval(request.data.decode('utf8'))
     voca_nm = req_dict['voca_nm']
     res = db_voca.search_voca_by_voca_nm(voca_nm)
+    
+    return jsonify(results = res)
+
+def search_entity(request):
+    req_dict = eval(request.data.decode('utf8'))
+    entity_nm = req_dict['entity_nm']
+    res = db_entity.search_entity_by_entity_nm(entity_nm)
     
     return jsonify(results = res)
 

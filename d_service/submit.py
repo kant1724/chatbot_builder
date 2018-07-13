@@ -3,6 +3,7 @@ from e_database import compression_tag as db_compression_tag
 from e_database import multiple_answer as db_multiple_answer
 from e_database import tag as db_tag
 from e_database import voca as db_voca
+from e_database import entity as db_entity
 from e_database import synonym as db_synonym
 from e_database import category as db_category
 from e_database import new_request as db_new_request
@@ -127,6 +128,17 @@ def submit_voca(request):
     if len(res) > 0:
         return jsonify('N')
     db_voca.insert_voca(voca_nm)
+    sc.result = None
+    
+    return jsonify('Y')
+
+def submit_entity(request):
+    req_dict = eval(request.data.decode('utf8'))
+    entity_nm = req_dict['entity_nm']
+    res = db_entity.search_entity_by_equal_entity_nm(entity_nm)
+    if len(res) > 0:
+        return jsonify('N')
+    db_entity.insert_entity(entity_nm)
     sc.result = None
     
     return jsonify('Y')

@@ -55,7 +55,7 @@ def get_category_list():
     return result
 
 def get_voca():
-    sql = "SELECT VOCA_NM, VOCA_SYNONYM, KEYWORD_YN FROM VOCA"
+    sql = "SELECT VOCA_NM, VOCA_SYNONYM, KEYWORD_YN, VOCA_ENTITY FROM VOCA"
     result = select.fetch(sql)
     
     return result

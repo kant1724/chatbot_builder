@@ -68,6 +68,10 @@ def search_synonym():
 def search_voca():
     return search.search_voca(request)
 
+@app.route('/search_entity', methods=['POST'])
+def search_entity():
+    return search.search_entity(request)
+
 @app.route('/search_voca_and_appearance', methods=['POST'])
 def search_voca_and_appearance():
     return search.search_voca_and_appearance(request)
@@ -156,6 +160,10 @@ def submit_synonym():
 def submit_voca():
     return submit.submit_voca(request)
 
+@app.route('/submit_entity', methods=['POST'])
+def submit_entity():
+    return submit.submit_entity(request)
+
 @app.route('/submit_voca_keyword', methods=['POST'])
 def submit_voca_keyword():
     return submit.submit_voca_keyword(request)
@@ -211,6 +219,10 @@ def delete_synonym_detail():
 @app.route('/delete_voca', methods=['POST'])
 def delete_voca():
     return delete.delete_voca(request)
+
+@app.route('/delete_entity', methods=['POST'])
+def delete_entity():
+    return delete.delete_entity(request)
 
 @app.route('/delete_category', methods=['POST'])
 def delete_category():

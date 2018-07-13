@@ -1,6 +1,7 @@
 from e_database import question_and_answer as qna
 from e_database import compression_tag as db_compression_tag
 from e_database import voca as db_voca
+from e_database import entity as db_entity
 from e_database import synonym as db_synonym
 from e_database import category as db_category
 from e_database import notice as db_notice
@@ -55,6 +56,13 @@ def delete_voca(request):
     
     return jsonify('')
 
+def delete_entity(request):
+    req_dict = eval(request.data.decode('utf8'))
+    entity_nm = req_dict['entity_nm']
+    db_entity.delete_entity_by_entity_nm(entity_nm)
+    
+    return jsonify('')
+
 def delete_category(request):
     req_dict = eval(request.data.decode('utf8'))
     category_num = req_dict['category_num']
@@ -70,4 +78,3 @@ def delete_notice(request):
     db_notice.delete_notice(user, project, notice_num)
     
     return jsonify('')
-
