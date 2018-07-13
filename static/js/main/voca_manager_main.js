@@ -6,6 +6,7 @@ var dsOption1= {
 		{name : 'num'  },
 		{name : 'voca_nm'  },
 		{name : 'voca_synonym'  },
+		{name : 'voca_entity'  },
 		{name : 'keyword_yn'  }
 	],
 	recordType : 'array',
@@ -14,8 +15,9 @@ var dsOption1= {
 
 var colsOption1 = [
 	 {id: 'num' , header: "순번" , width :60 },
-	 {id: 'voca_nm' , header: "단어명" , width :300 },
-	 {id: 'voca_synonym' , header: "동의어" , width :420 },
+	 {id: 'voca_nm' , header: "단어명" , width :250 },
+	 {id: 'voca_synonym' , header: "동의어" , width :250},
+	 {id: 'voca_entity' , header: "엔티티" , width :250 },
 	 {id: 'keyword_yn' , header: "키워드" , width :60 }
 ];
 
@@ -103,6 +105,7 @@ function search_voca_callback(ret_data) {
 		a.push(i + 1);
 		a.push(ret_data[i]["voca_nm"]);
 		a.push(ret_data[i]["voca_synonym"]);
+		a.push(ret_data[i]["voca_entity"]);
 		a.push(ret_data[i]["keyword_yn"]);
 		grid_data1.push(a);
 	}
