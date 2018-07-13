@@ -116,6 +116,11 @@
 	padding-bottom: 10px;
 }
 
+#extracted_entity_text {
+	position: relative;
+	font-size: 0.8em;
+}
+
 #right_point_title {
 	position: relative;
 	left: 10px;

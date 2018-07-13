@@ -52,3 +52,7 @@ def update_voca_synonym(voca_synonym, voca_nm):
 def update_keyword_yn(voca_nm):
     sql = "UPDATE VOCA SET KEYWORD_YN = CASE WHEN KEYWORD_YN = 'Y' THEN '' ELSE 'Y' END WHERE VOCA_NM = '" + voca_nm + "'"
     update.commit(sql)
+
+def update_voca_entity(voca_nm, entity_nm):
+    sql = "UPDATE VOCA SET VOCA_ENTITY = '" + entity_nm + "' WHERE VOCA_NM = '" + voca_nm + "'"
+    update.commit(sql)

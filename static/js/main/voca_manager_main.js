@@ -17,7 +17,7 @@ var colsOption1 = [
 	 {id: 'num' , header: "순번" , width :60 },
 	 {id: 'voca_nm' , header: "단어명" , width :250 },
 	 {id: 'voca_synonym' , header: "동의어" , width :250},
-	 {id: 'voca_entity' , header: "엔티티" , width :250 },
+	 {id: 'voca_entity' , header: "엔티티명" , width :250 },
 	 {id: 'keyword_yn' , header: "키워드" , width :60 }
 ];
 
@@ -55,6 +55,9 @@ $(document).ready(function() {
 	$("#delete_voca").click(function() {
 		delete_voca();
 	});
+	$("#update_voca_entity").click(function() {
+		update_voca_entity();
+	});
 	$("#submit_voca_keyword").click(function() {
 		submit_voca_keyword();
 	});
@@ -63,6 +66,9 @@ $(document).ready(function() {
         	search_voca();
         }
     });
+	parent.$("#submit_voca_entity").click(function() {
+		submit_voca_entity();
+	});
 	search_voca();
 });
 	
@@ -83,6 +89,10 @@ function ajax(url, input_data, gubun, method) {
             	delete_voca_callback();
             } else if (gubun == "submit_voca_keyword") {
             	submit_voca_keyword_callback();
+            } else if (gubun == "search_entity") {
+            	search_entity_callback(data['results']);
+            } else if (gubun == "submit_voca_entity") {
+            	submit_voca_entity_callback();
             }
         },
         error: function (jqXhr, textStatus, errorMessage) {
@@ -127,6 +137,14 @@ function submit_voca() {
 	ajax('/submit_voca', input_data, 'submit_voca', 'POST');
 }
 
+function submit_voca_entity() {
+	var voca_nm = $("#voca_nm").val();
+	var entity_nm = parent.$("#entity_nm option:selected").val();
+	var input_data = {"voca_nm" : voca_nm, "entity_nm" : entity_nm};
+	
+	ajax('/submit_voca_entity', input_data, 'submit_voca_entity', 'POST');
+}
+
 function submit_voca_keyword() {
 	if ($("#voca_nm").val() == '') {
 		alert("단어를 선택하세요.");
@@ -153,12 +171,24 @@ function delete_voca() {
 	ajax('/delete_voca', input_data, 'delete_voca', 'POST');
 }
 
-function update_voca_synonym() {
-	if (!confirm("동의어를 업데이트 하시겠습니까?")) {
+function update_voca_entity() {
+	if ($("#voca_nm").val() == '') {
+		alert("엔티티 설정할 단어를 선택하세요.");
 		return;
 	}
-	var input_data = {};
-	ajax('/update_voca_synonym', input_data, 'update_voca_synonym', 'POST');
+	var input_data = {"entity_nm" : ""};
+	ajax('/search_entity', input_data, 'search_entity', 'POST');
+}
+
+function search_entity_callback(data) {
+	parent.$('#entity_nm').empty();
+	var options = '<option value=""></option>';
+	for (var i = 0; i < data.length; ++i) {
+		var entity_nm = data[i]['entity_nm'];
+		options += '<option value="' + entity_nm + '">' + entity_nm + '</option>';
+	}
+	parent.$('#entity_nm').append(options);
+	parent.$('#set_entity').modal({});
 }
 
 function submit_voca_callback(data) {
@@ -172,6 +202,12 @@ function submit_voca_callback(data) {
 
 function submit_voca_keyword_callback() {
 	alert("처리 완료되었습니다.");
+	search_voca();
+}
+
+function submit_voca_entity_callback() {
+	alert("처리 완료되었습니다.");
+	parent.$('#set_entity_modal_close').click();
 	search_voca();
 }
 

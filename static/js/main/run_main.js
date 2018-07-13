@@ -39,9 +39,11 @@ function run_main_get_answer_callback(data) {
 	var answer = data['answer'];
 	var point = data['point'];
 	var word = data['word'];
+	var entity = data['entity'];
 	$('#my_question_text').html($("#question").val());
 	$('#answer_text').html(answer);
 	$('#right_point_text').html(point);
 	$('#extracted_word_text').html(word);
+	$('#extracted_entity_text').html(entity);
 	$("#question").val('');
 }

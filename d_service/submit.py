@@ -150,6 +150,14 @@ def submit_voca_keyword(request):
     
     return jsonify('')
 
+def submit_voca_entity(request):
+    req_dict = eval(request.data.decode('utf8'))
+    voca_nm = req_dict['voca_nm']
+    entity_nm = req_dict['entity_nm']
+    db_voca.update_voca_entity(voca_nm, entity_nm)
+    
+    return jsonify('')
+
 def submit_category(request):
     req_dict = eval(request.data.decode('utf8'))
     for i in range(len(req_dict)):

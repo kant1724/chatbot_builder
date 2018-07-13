@@ -17,6 +17,24 @@ def get_voca_from_question(question, all_voca):
     
     return question_voca
 
+def get_voca_and_entity_from_question(question, all_voca):
+    question_voca = []
+    question_entity = []
+    qs_arr = question.split(" ")
+    for qs in qs_arr:
+        for voca in all_voca:
+            voca_synonym_str = voca['voca_synonym']
+            voca_synonym_arr = voca_synonym_str.split("^")
+            keyword_yn = voca['keyword_yn']
+            voca_entity = voca['voca_entity']
+            if keyword_yn == 'Y':
+                for voca_synonym in voca_synonym_arr:
+                    if voca_synonym in qs and voca_synonym_str not in question_voca:
+                        question_voca.append(voca_synonym_str)
+                        question_entity.append(voca_entity)
+    
+    return question_voca, question_entity
+
 def get_question_voca(question):
     token_arr = question.split(" ")
     voca = []

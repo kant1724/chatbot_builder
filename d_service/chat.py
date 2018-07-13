@@ -272,8 +272,15 @@ def run_main_get_answer(request):
     else:
         answer, _ = db_chat.get_answer_by_answer_num(user, project, answer_num)
     _, point = sentence_comparator.compare_by_formula(user, project, question, answer_num)
-    word = ",".join(voca_util.get_voca_from_question(question, all_voca))
-    res = {'answer' : answer, 'point' : point, 'word' : word}    
+    v, e = voca_util.get_voca_and_entity_from_question(question, all_voca)
+    word = ",".join(v)
+    entity = ""
+    for i in range(len(e)):
+        if e[i] != None and e[i] != "":
+            entity += e[i]
+            if i < len(e) - 1:
+                entity += ","
+    res = {'answer' : answer, 'point' : point, 'word' : word, 'entity' : entity}    
     
     return jsonify(res)
 

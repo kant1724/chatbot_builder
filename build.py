@@ -168,6 +168,10 @@ def submit_entity():
 def submit_voca_keyword():
     return submit.submit_voca_keyword(request)
 
+@app.route('/submit_voca_entity', methods=['POST'])
+def submit_voca_entity():
+    return submit.submit_voca_entity(request)
+
 @app.route('/submit_category', methods=['POST'])
 def submit_category():
     return submit.submit_category(request)
