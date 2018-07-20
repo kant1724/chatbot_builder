@@ -18,11 +18,7 @@ def get_faq_answer(user, project, msg, answer_num, answer, question, message_cou
         trained_yn = True
         msg.append(answer + message_container.get_last_mdfc_date(mdfc_rgsn_date))
         right_yn = message_container.get_right_yn_href_msg(message_count)
-        cnt = qna.search_image_cnt_in_answer(user, project, answer_num)
-        path = properties.get_image_file_root_path() + user + '/' + project + '/' + answer_num
-        if cnt != None and cnt > 0:
-            for i in range(cnt):
-                image_path.append('http://' + file_ip + path + '/image' + str(i + 1) + '.jpg') 
+        image_path = get_image_path(user, project, answer_num)
         
     return msg, right_yn, image_path, trained_yn
 
@@ -62,3 +58,14 @@ def get_answer_in_multiple(answer_num, srno, user, project):
     res = db_multiple_answer.search_multiple_answer_by_srno(answer_num, srno, user, project)
     
     return [res['answer']]
+
+def get_image_path(user, project, answer_num):
+    image_path = []
+    cnt = qna.search_image_cnt_in_answer(user, project, answer_num)
+    path = properties.get_image_file_root_path() + user + '/' + project + '/' + answer_num
+    if cnt != None and cnt > 0:
+        for i in range(cnt):
+            image_path.append('http://' + file_ip + path + '/image' + str(i + 1) + '.jpg')
+    
+    return image_path        
+    

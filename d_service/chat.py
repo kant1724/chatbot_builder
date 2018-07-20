@@ -228,9 +228,10 @@ def reply_group_chat(request):
         answer = '해당 질문에 대한 답변이 하나 이상입니다. 좀더 구체적으로 부탁드립니다!'
     else:
         answer, _ = db_chat.get_answer_by_answer_num(user, project, answer_num)
+    image_path = faq_manager.get_image_path(user, project, answer_num)
     user_ip = request.remote_addr
     db_chat.collect_question(user_ip, question, answer_num)    
-    res = {'answer' : answer}
+    res = {'answer' : answer, 'image_path' : str(image_path)}
     
     return jsonify(res)
 
