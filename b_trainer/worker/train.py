@@ -4,7 +4,7 @@ from b_trainer.worker import connect_tensorflow as ct
 from e_database import training_config as db_training_config
 
 enc_vocab_size = 1000
-dec_vocab_size = 1000
+dec_vocab_size = 5000
 language = 'kor'
 enc_vocab = None
 rev_dec_vocab = None
